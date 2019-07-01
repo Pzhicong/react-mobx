@@ -7,9 +7,6 @@ function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
-console.log(path.resolve(__dirname, '../'))
-
-
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {

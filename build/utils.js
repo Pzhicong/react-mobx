@@ -17,7 +17,10 @@ exports.cssLoaders = function (options) {
   const cssLoader = {
     loader: 'css-loader',
     options: {
-      sourceMap: options.sourceMap
+      sourceMap: options.sourceMap,
+      modules: {
+        mode: 'local'
+      }
     }
   }
 
@@ -48,9 +51,9 @@ exports.cssLoaders = function (options) {
     //     use: loaders,
     //     fallback: 'vue-style-loader'
     //   })
-    return ['vue-style-loader'].concat(loaders)
+    return ['style-loader'].concat(loaders)
     } else {
-      return ['vue-style-loader'].concat(loaders)
+      return ['style-loader'].concat(loaders)
     }
   }
 
